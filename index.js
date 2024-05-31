@@ -6,6 +6,10 @@ const cors = require("cors");
 doenv.config();
 app.use(express.json());
 app.use(cors());
+
+app.get("/" , (req, res) => {
+    return res.send("api is running ")
+})
  
 // local folder
 const connectDB = require('./config/connectDB');
